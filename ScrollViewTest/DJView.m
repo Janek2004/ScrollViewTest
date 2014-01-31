@@ -7,6 +7,9 @@
 //
 
 #import "DJView.h"
+@interface DJView()
+@property(nonatomic,strong) UIImageView * imgView;
+@end
 
 @implementation DJView
 int i=0;
@@ -15,7 +18,9 @@ int i=0;
 {
     self = [super initWithFrame:frame];
     if (self) {
-        // Initialization code
+
+        _imgView = [[UIImageView alloc]initWithFrame:CGRectMake(0,300, 0.2 * CGRectGetWidth(frame), 0.2 *CGRectGetHeight(frame)) ];
+          [self addSubview:_imgView];
     }
     return self;
 }
@@ -24,7 +29,10 @@ int i=0;
     self = [super initWithCoder:aDecoder];
     if(self){
         self.backgroundColor = [UIColor clearColor];
-        
+        CGRect frame = self.bounds;
+         _imgView = [[UIImageView alloc]initWithFrame:CGRectMake(20, 300, 0.2 * CGRectGetWidth(frame), 0.2 *CGRectGetHeight(frame)) ];
+
+        [self addSubview:_imgView];
         
     }
     return self;
@@ -49,38 +57,39 @@ int i=0;
     CGContextAddLineToPoint(ctx1, 200, 200);
     CGContextStrokePath(ctx1);
     
-    
     CGRect  r = CGRectApplyAffineTransform(rect,self.transform );
 
-    //that gives a big image
-    UIGraphicsBeginImageContextWithOptions(r.size, NO, 0.0);
-    CGContextRef ctx = UIGraphicsGetCurrentContext();
-    CGContextConcatCTM(ctx, self.transform);
-    
-     CGContextSetStrokeColorWithColor(ctx, wh);
-     CGContextMoveToPoint(ctx, 0, 0);
-     CGContextAddLineToPoint(ctx, 200, 200);
-     CGContextStrokePath(ctx);
+    UIGraphicsBeginImageContextWithOptions(rect.size, YES, 0.0);
+//    CGContextRef ctx = UIGraphicsGetCurrentContext();
+//    CGContextConcatCTM(ctx, self.transform);
+//    CGContextFillRect(ctx, rect);
+//   
+//    CGContextSetStrokeColorWithColor(ctx, wh);
+//    CGContextMoveToPoint(ctx, 0, 0);
+//    CGContextAddLineToPoint(ctx, 200, 200);
+//    CGContextStrokePath(ctx);
+//
+    [self.layer renderInContext:UIGraphicsGetCurrentContext()];
+  
     
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
 
-    CGImageRef cgImg = CGImageCreateWithImageInRect(image.CGImage, rect);
-    UIImage *img = [UIImage imageWithCGImage:cgImg];
-    
-     NSData * d = UIImageJPEGRepresentation(img, 0.8);
- 
-    
+ //   CGImageRef cgImg = CGImageCreateWithImageInRect(image.CGImage, rect);
+  //  UIImage *img = [UIImage imageWithCGImage:cgImg];
+     self.imgView.image = image;
+     NSData * d = UIImageJPEGRepresentation(image, 0.8);
     [self save:d forFrame:i];
+    
     UIGraphicsEndImageContext();
 
-//    UIGraphicsBeginImageContextWithOptions(rect.size, NO, 0.0);
-//    [image drawAtPoint:rect.origin];
-//   
-//    CGContextClipToRect(ctx1, rect);
-//   UIImage *imageResult = UIGraphicsGetImageFromCurrentImageContext();
-//     NSData * d = UIImageJPEGRepresentation(imageResult, 0.8);
-//    [self save:d forFrame:i];
-//     UIGraphicsEndImageContext();
+    UIGraphicsBeginImageContextWithOptions(rect.size, NO, 0.0);
+    [image drawAtPoint:rect.origin];
+   
+     CGContextClipToRect(ctx1, rect);
+    
+    
+     self.imgView.image = image;
+     UIGraphicsEndImageContext();
 
 }
 

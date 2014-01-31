@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		82454F9318976D4700B856A5 /* DJView.m in Sources */ = {isa = PBXBuildFile; fileRef = 82454F9218976D4700B856A5 /* DJView.m */; };
 		8279147918943C3700B9EEC2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8279147818943C3700B9EEC2 /* Foundation.framework */; };
 		8279147B18943C3700B9EEC2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8279147A18943C3700B9EEC2 /* CoreGraphics.framework */; };
 		8279147D18943C3700B9EEC2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8279147C18943C3700B9EEC2 /* UIKit.framework */; };
@@ -21,6 +22,8 @@
 		8279149A18943C3700B9EEC2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8279147C18943C3700B9EEC2 /* UIKit.framework */; };
 		827914A218943C3700B9EEC2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 827914A018943C3700B9EEC2 /* InfoPlist.strings */; };
 		827914A418943C3700B9EEC2 /* ScrollViewTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 827914A318943C3700B9EEC2 /* ScrollViewTestTests.m */; };
+		827914AF18943C9700B9EEC2 /* IMG_8282.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 827914AE18943C9700B9EEC2 /* IMG_8282.jpg */; };
+		827914B11894C79000B9EEC2 /* iPadStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 827914B01894C79000B9EEC2 /* iPadStoryboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		82454F9118976D4700B856A5 /* DJView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DJView.h; sourceTree = "<group>"; };
+		82454F9218976D4700B856A5 /* DJView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DJView.m; sourceTree = "<group>"; };
 		8279147518943C3700B9EEC2 /* ScrollViewTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScrollViewTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8279147818943C3700B9EEC2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8279147A18943C3700B9EEC2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -53,6 +58,8 @@
 		8279149F18943C3700B9EEC2 /* ScrollViewTestTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ScrollViewTestTests-Info.plist"; sourceTree = "<group>"; };
 		827914A118943C3700B9EEC2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		827914A318943C3700B9EEC2 /* ScrollViewTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScrollViewTestTests.m; sourceTree = "<group>"; };
+		827914AE18943C9700B9EEC2 /* IMG_8282.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_8282.jpg; sourceTree = "<group>"; };
+		827914B01894C79000B9EEC2 /* iPadStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPadStoryboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,11 +119,14 @@
 		8279147E18943C3700B9EEC2 /* ScrollViewTest */ = {
 			isa = PBXGroup;
 			children = (
+				827914AD18943C4A00B9EEC2 /* iPad */,
 				8279148718943C3700B9EEC2 /* DJAppDelegate.h */,
 				8279148818943C3700B9EEC2 /* DJAppDelegate.m */,
 				8279148A18943C3700B9EEC2 /* Main.storyboard */,
 				8279148D18943C3700B9EEC2 /* DJViewController.h */,
 				8279148E18943C3700B9EEC2 /* DJViewController.m */,
+				82454F9118976D4700B856A5 /* DJView.h */,
+				82454F9218976D4700B856A5 /* DJView.m */,
 				8279149018943C3700B9EEC2 /* Images.xcassets */,
 				8279147F18943C3700B9EEC2 /* Supporting Files */,
 			);
@@ -150,6 +160,15 @@
 				827914A018943C3700B9EEC2 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		827914AD18943C4A00B9EEC2 /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+				827914AE18943C9700B9EEC2 /* IMG_8282.jpg */,
+				827914B01894C79000B9EEC2 /* iPadStoryboard.storyboard */,
+			);
+			name = iPad;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +251,8 @@
 				8279149118943C3700B9EEC2 /* Images.xcassets in Resources */,
 				8279148318943C3700B9EEC2 /* InfoPlist.strings in Resources */,
 				8279148C18943C3700B9EEC2 /* Main.storyboard in Resources */,
+				827914AF18943C9700B9EEC2 /* IMG_8282.jpg in Resources */,
+				827914B11894C79000B9EEC2 /* iPadStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,6 +271,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82454F9318976D4700B856A5 /* DJView.m in Sources */,
 				8279148918943C3700B9EEC2 /* DJAppDelegate.m in Sources */,
 				8279148F18943C3700B9EEC2 /* DJViewController.m in Sources */,
 				8279148518943C3700B9EEC2 /* main.m in Sources */,
@@ -382,7 +404,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ScrollViewTest/ScrollViewTest-Prefix.pch";
 				INFOPLIST_FILE = "ScrollViewTest/ScrollViewTest-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -395,7 +419,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ScrollViewTest/ScrollViewTest-Prefix.pch";
 				INFOPLIST_FILE = "ScrollViewTest/ScrollViewTest-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -461,6 +487,7 @@
 				827914A918943C3700B9EEC2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		827914AA18943C3700B9EEC2 /* Build configuration list for PBXNativeTarget "ScrollViewTestTests" */ = {
 			isa = XCConfigurationList;
@@ -469,6 +496,7 @@
 				827914AC18943C3700B9EEC2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
